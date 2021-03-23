@@ -11,7 +11,7 @@ class ContactsModel {
 
 class HomeScreen extends StatelessWidget {
   // ignore: non_constant_identifier_names
-  List<ContactsModel> ContactsList = [
+  List<ContactsModel> contactsList = [
     ContactsModel(code: 'M', name: 'Mohamed Ali', number: '0100000000'),
     ContactsModel(code: 'A', name: 'Ali Samy', number: '01011111111'),
     ContactsModel(code: 'S', name: 'Samy Ibrahim', number: '0102222222'),
@@ -31,10 +31,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(),
       body: ListView.separated(
         itemBuilder: (context, index) => contactItem(
-          mode: ContactsList[index],
+          mode: contactsList[index],
         ),
         separatorBuilder: (context, index) => myDivider(),
-        itemCount: ContactsList.length,
+        itemCount: contactsList.length,
       ),
     );
   }
